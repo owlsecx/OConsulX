@@ -18,7 +18,7 @@
 
 ## 📌 Overview
 
-Consul / etcd / Nomad configuration security auditor
+OConsulX — Service-Discovery / Distributed KV Config Auditor. It provides stdlib HCL / JSON / YAML-lite / ETCD_* env / --flag parsers; Consul — ACL default policy, script checks RCE, remote exec, gossip key strength, verify_* mTLS, UI / API exposure, CORS, plaintext tokens, Connect CA. Built-in demo/self-test paths and severity gates help validate detections without touching production when those flags are used.
 
 ---
 
@@ -30,7 +30,6 @@ Consul / etcd / Nomad configuration security auditor
 - Nomad — ACL, TLS http / rpc, raw_exec, privileged docker, capabilities, host volumes, Vault / Consul integration tokens and TLS verification
 - Secrets masked everywhere; --root discovery; CWE + MITRE
 - Export TXT / Markdown / JSON / CSV / SARIF 2.1.0
-- Self-test --demo, CI gates --fail-on / --min-severity
 
 ---
 
@@ -44,7 +43,10 @@ Consul / etcd / Nomad configuration security auditor
 ## 🚀 Usage
 
 ```bash
-./OConsulX
+./OConsulX                                     # interactive menu
+./OConsulX --scan -r /path/to/root
+./OConsulX --demo
+./OConsulX --help
 ```
 
 ---
